@@ -1,0 +1,31 @@
+﻿@using IdentityService.Quickstart.Account
+@model RecoverPasswordViewModel
+
+<div class="login-page">
+
+    <partial name="_ValidationSummary" />
+
+    <div class="row">
+
+        
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Przypomnij hasło</h2>
+                    </div>
+
+                    <div class="card-body">
+                        <form asp-route="Recover">
+
+                            <div class="form-group">
+                                <label asp-for="Email"></label>
+                                <input class="form-control" placeholder="Email" asp-for="Email" autofocus>
+                            </div>
+                            <button class="btn btn-primary" name="button" value="login">Przypomnij</button>
+                            <button class="btn btn-secondary" name="button" asp-controller="Account" asp-action="Login">Anuluj</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
